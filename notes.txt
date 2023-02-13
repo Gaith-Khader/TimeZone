@@ -1,0 +1,15 @@
+Notes for NEW PROJECTS:
+
+1-Folder Setup:
+   -Folder Setup -----------------------DONE
+   -Vendor -----------------------------DONE
+   -MAKE COPY OF A READY FOLDER SETUP --DONE
+2-New class called (row) to insert display Flex.
+3-Use nav and sections insted of divs.
+4-Use classes always even in ul, li and a.
+5-Use //tanseq ext//.
+6-Use Public Styles.
+7-Clip path maker.
+8-Transtion for dropdowan (Watch Video)
+
+

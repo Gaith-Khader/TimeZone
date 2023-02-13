@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+/******** public style - start ********/
+::selection{
+    color: white;
+    background-color: #ff2020;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 60%;
+    margin: auto;
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Josefin Sans', sans-serif;
+}
+/******** public style - end ********/
+
+/******** nav - start ********/
+nav{
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    padding-top: 2%;
+    z-index: 9999999;
+    box-shadow: rgb(74 74 75) 0px 0px 30px -16px;
+}
+/****************/
+nav .nav-logo{
+    width: 20%;
+    text-align: center;
+}
+nav .nav-logo img{
+    width: 35%;
+}
+/****************/
+nav .nav-list{
+    width: 60%;
+}
+nav .nav-list .list{
+    display: flex;
+    justify-content: center;
+}
+nav .nav-list .list .list-item{
+    margin-right: 40px;
+    position: relative;
+}
+nav .nav-list .list .list-item .item-link{
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.5s;
+}
+nav .nav-list .list .list-item:hover .item-link{
+    color: #ff2020;
+}
+nav .nav-list .list .list-item:nth-child(4)::after{
+    content: 'HOT';
+    position: absolute;
+    bottom: 25px;
+    left: 35px;
+    background-color: #ff2020;
+    color: #fff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 10px;
+    box-shadow: 2px 2px 4px 0px #0000009e;
+}
+nav .nav-list .list .list-item .dropdown{
+    background-color: #fff;
+    position: absolute;
+    width: 160px;
+    top: 50px;
+    left: -4px;
+    padding: 15px;
+    border-radius: 5px;
+    border-top: 3px solid #ff2020;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.6s, opacity 0.5s;
+}
+nav .nav-list .list .list-item .dropdown::before{
+    content: ' ';
+    position: absolute;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid red;
+    top: -21px;
+}
+nav .nav-list .list .list-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+}
+nav .nav-list .list .list-item .dropdown .dropdown-link{
+    color: black;
+    font-weight: 600;
+    transition: color 0.5s;
+}
+nav .nav-list .list .list-item .dropdown .dropdown-link:hover{
+    color: #ff2020;
+}
+nav .nav-list .list .list-item .dropdown .dropdown-item{
+    padding: 8px 0;
+}
+/****************/
+nav .nav-icon{
+    width: 20%;
+    text-align: center;
+}
+nav .nav-icon i{
+    padding-left: 25px;
+    color: black;
+    transition: color 0.5s;
+}
+nav .nav-icon i:hover{
+    color: #ff2020;
+}
+/******** nav - end ********/
+
+/******** header - start ********/
+.header{
+    height: fit-content;
+    background-color: #f0f0f2;
+    overflow: hidden;
+    padding-top: 103.34px;
+}
+.header .container{
+    width: 70%;
+    overflow: hidden;
+}
+.header .header-img{
+    text-align: right;
+    animation: watch-pulse 1.5s infinite alternate;
+}
+.header .header-content{
+    width: 70%;
+    padding-left: 90px;
+    animation: go-left 3s;
+}
+.header .header-content h2{
+    font-size: 96px;
+    color: #0b1c39;
+    margin-bottom: 40px;
+    animation: slide-right 1.5s;
+    line-height: 110px;
+}
+.header .header-content p{
+    font-size: 17px;
+    margin-bottom: 60px;
+}
+.header .header-content .header-bt{
+    font-size: 16px;
+    color: white;
+    background-color: #4A4A4B;
+    padding: 15px 30px;
+    position: relative;
+    box-shadow: inset 0 0 0 0 red;
+    transition: ease-out 0.3s;
+    border: 0;
+}
+.header .header-content .header-bt:hover{
+    box-shadow: inset 200px 0 0 0 red;
+}
+
+/* animation */
+@keyframes watch-pulse{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.04);
+    }
+}
+@keyframes go-left{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+/******** header - end ********/
+
+/******** new-product - start ********/
+.new-products{
+    padding: 200px 0;
+}
+.new-products h2{
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+.new-products .new-product .new-product-item .product-img{
+    overflow: hidden;
+}
+.new-products .new-product .new-product-item .product-img img{
+    transition: all .4s ease-out 0s;
+}
+.new-products .new-product .new-product-item:hover img{
+    transform: scale(1.04);
+}
+.new-products .new-product .new-product-item .product-desc h3{
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+}
+.new-products .new-product .new-product-item .product-desc span{
+    font-size: 18px;
+    text-align: center;
+    color: #ff2020;
+    display: block;
+}
+/******** new-product - end ********/
+
+
+/******** gallery - start ********/
+.gallery .small .small-img1{
+    margin-bottom: 35px;
+    position: relative;
+}
+.gallery .img-ga{
+    position: relative;
+    overflow: hidden;
+}
+.gallery .img-ga img{
+    transition: transform 0.4s;
+    transform: scale(1.05);
+}
+.gallery .img-ga:hover img{
+    transform: scale(1);
+}
+.gallery .img-ga::after{
+    content: '';
+    background-color: rgba(1,10,28,0.3);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    transition: all .4s ease-out 0s;
+}
+.gallery .img-ga:hover::after{
+    opacity: 1;
+}
+/******** gallery - end ********/
+
+
+/******** popular - start ********/
+.popular{
+    padding: 200px 0;
+    text-align: center;
+}
+.popular h2{
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.popular .sub-para{
+    font-size: 16px;
+    line-height: 25px;
+}
+.popular .pop-items{
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.popular .pop-items .pop-item{
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.popular .pop-item h3{
+    margin: 20px 0;
+    font-size: 24px;
+}
+.popular .pop-item p{
+    margin: 20px 0;
+    font-size: 18px;
+}
+.popular .pop-items .pop-item .img-cap{
+    border-bottom: 3px solid #ff2020;
+    overflow: hidden;
+    position: relative;
+}
+.popular .pop-items .pop-item img{
+    width: 100%;
+    overflow: hidden;
+}
+.popular .pop-items .pop-item .img-cap span{
+    position: absolute;
+    top: 400px;
+    right: 0;
+    left: 0;
+    background-color: red;
+    padding: 10px 0;
+    color: white;
+    font-size: 18px;
+    z-index: 9999;
+    cursor: pointer;
+    transition: top 0.4s;
+}
+.popular .pop-item i{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 26px;
+    z-index: 9999;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s;
+}
+.popular .pop-items .pop-item .img-cap:hover span{
+    top: 345px;
+}
+.popular .pop-item:hover i{
+    visibility: visible;
+    opacity: 1;
+}
+.popular .view-more{
+    font-size: 16px;
+    color: white;
+    background-color: red;
+    padding: 20px 30px;
+    position: relative;
+    box-shadow: inset 0 0 0 0 #4A4A4B;
+    transition: ease-out 0.3s;
+    border: 0;
+}
+.popular .view-more:hover{
+box-shadow: inset 360px 0 0 0 #4A4A4B;
+}
+/******** popular - end ********/
+
+/******** video - start ********/
+.video{
+    position: relative;
+}
+/* .video::after{
+    content: url('assets/img/video-cover.jpg');
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+} */
+/******** video - end ********/
+
+/******** choices - start ********/
+.choice1 , .choice2{
+    padding-top: 150px;
+}
+.choice1 .choice1-desc h2,
+.choice2 .choice2-desc h2{
+    font-size: 56px;
+    margin-bottom: 50px;
+}
+.choice1 .choice1-desc p,
+.choice2 .choice2-desc p{
+    margin-bottom: 50px;
+    font-size: 17px;
+    color: #777777;
+    width: 70%;
+    line-height: 30px;
+    text-align: justify;
+}
+.choice1 .choice1-desc a,
+.choice2 .choice2-desc a{
+    font-size: 24px;
+    color: white;
+    background-color: #ff2020;
+    padding: 15px 40px;
+    position: relative;
+    box-shadow: inset 0 0 0 0 #4A4A4B;
+    transition: ease-out 0.3s;
+    border: 0;
+}
+.choice1 .choice1-desc a:hover,
+.choice2 .choice2-desc a:hover{
+    box-shadow: inset 250px 0 0 0 #4A4A4B;
+}
+.choice2 .choice2-img{
+    padding-right: 100px;
+}
+.choice2 .choice2-desc p{
+    width: 84%;
+}
+/******** choices - end ********/
+
+/******** shop-method - start ********/
+.shop-method{
+    color: #fff;
+    margin: 150px 0px 50px 0px;
+}
+.shop-method .container{
+    background-color: #ff2020;
+    padding: 30px;
+}
+.shop-method .method{
+    width: 30%;
+}
+.shop-method .method i{
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+.shop-method .method h3{
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+.shop-method .method p{
+    width: 88%;
+    font-size: 14px;
+    line-height: 30px;
+}
+/******** shop-method - end ********/
+
+
+/******** footer - start ********/
+footer{
+    padding: 100px 0;
+}
+footer .column{
+    width: 30%;
+    color: #868c98;
+}
+/* column1 */
+footer .column .logo-footer{
+    margin-bottom: 42px;
+}
+footer .column1 .column1-para{
+    width: 90%;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+/* column2,3,4 */
+footer .column h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #000;
+}
+footer .column ul li{
+    font-size: 16px;
+    line-height: 30px;
+}
+footer .column ul li a{
+    color: #868c98;
+    transition: color .5s, padding .5s;
+}
+
+/* hover */
+footer .column ul li a:hover{
+    padding-left: 5px;
+    color: #ff2020;
+}
+/******** footer - end ********/
+
+/******** copy-rights - start ********/
+.copy-rights{
+    padding: 50px 0;
+    font-size: 16px;
+    color: #868c98;
+}
+.copy-rights i,span{
+    color: #ff2020
+}
+.copy-rights .line .icons{
+    width: 10%;
+}
+.copy-rights .line .icons i{
+    color: #000;
+    transform: rotateY(180deg);
+    transition: 0.4s;
+}
+.copy-rights .line .icons i:hover{
+    transform: rotateY(0deg);
+    color: #ff2020;
+}
+/******** copy-rights - end ********/
+
+
+
+
+label,#inpCheck{
+    display:none;
+}
